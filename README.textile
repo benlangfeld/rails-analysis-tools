@@ -6,13 +6,13 @@ h2. Rails Log Analyser
 
 This is one of the best utilities!  A Rails log often gets lines from different requests interleaved within each other, making it difficult to see what a particular request logged.  This utility sorts this out.  There are two ways of using this:
 
-  <pre><code>./rails_log_analyser production.log -l</code></pre>
+  <pre><code>./rails_log_analyser [--sort, --collate, -i ID] [path_to_input_file(s)]</code></pre>
 
 Which will output for each request: an id, the Controller/Action, the time taken and the status code.  You can then view the log output for one or more of these requests with:
 
-  <pre><code>./rails_log_analyser production.log -s 243 1012</code></pre>
+  <pre><code>./rails_log_analyser -i 243,1012</code></pre>
 
-Where the numbers are the ids are the ids given in the -l output.
+Where the numbers are the ids are the ids given in the list output.
 
 h2. Passenger DTrace script
 
